@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const getport = require('getport')
+const internalIP = require('internal-ip')
+const opn = require('opn')
+
+const app = require('../lib')
+const log = require('../lib/log')
+
+getport(3000, 5000, (err, port) => {
+  if (err) {
+    throw new Error(err)
+  }
+
+  let host = internalIP() + ':' + port
+  let protocol = 'http://'
+
+  app.listen(port, () => {
+    log.info({
+      url: host,
+      type: 'connect',
+      message: 'server running on '
+    })
+
+    opn(protocol + host)
+  })
+})

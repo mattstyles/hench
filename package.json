@@ -1,0 +1,52 @@
+{
+  "name": "hench",
+  "version": "0.0.0",
+  "description": "Zero config static server",
+  "main": "lib",
+  "bin": {
+    "hench": "bin/hench"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src --out-dir lib",
+    "watch": "babel src --out-dir lib --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattstyles/hench.git"
+  },
+  "keywords": [
+    "henchman",
+    "minion",
+    "koa",
+    "serve",
+    "server",
+    "static",
+    "spa"
+  ],
+  "author": "Matt Styles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattstyles/hench/issues"
+  },
+  "homepage": "https://github.com/mattstyles/hench#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-async-to-generator": "^6.8.0"
+  },
+  "dependencies": {
+    "bole": "^3.0.1",
+    "garnish": "^5.2.0",
+    "getport": "^0.1.0",
+    "internal-ip": "^1.2.0",
+    "koa": "^2.0.0-alpha.5",
+    "koa-static": "^3.0.0",
+    "opn": "^4.0.2"
+  }
+}

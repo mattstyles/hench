@@ -23,6 +23,6 @@ app.use(async (ctx, next) => {
   })
 })
 
-app.use(serve(path.join(__dirname, '../', 'dist')))
+app.use(serve('./'))
 
 module.exports = app

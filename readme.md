@@ -18,13 +18,21 @@ $ npm i -S hench
 
 ## Example
 
-```js
-const hench = require('hench')
+```sh
+$ cd /projects/my-awesome-project
+$ hench
 ```
 
-## Usage
+Hench will start serving any files found at `/projects/my-awesome-project`, that’s it. No magic, no fuss, just serving stuff.
 
+## Programmatic Example
 
+```js
+const app = require('hench')
+app.listen(3000, () => {
+  console.log('Listening on 3000')
+})
+```
 
 ## Running tests
 

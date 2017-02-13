@@ -2,12 +2,15 @@
 const path = require('path')
 
 const Koa = require('koa')
+const cors = require('kcors')
 const serve = require('koa-static')
 const bole = require('bole')
 
 const log = require('./log')
 
 const app = new Koa()
+
+app.use(cors())
 
 app.use(async (ctx, next) => {
   let start = Date.now()

@@ -3,7 +3,22 @@
 const getport = require('getport')
 const internalIP = require('internal-ip')
 const opn = require('opn')
-const argv = require('minimist')(process.argv.slice(2))
+const argv = require('minimist')(process.argv.slice(2), {
+  alias: {
+    v: 'version',
+    h: 'help'
+  }
+})
+
+if (argv.version) {
+  require('./version')
+  process.exit(0)
+}
+
+if (argv.help) {
+  require('./help')
+  process.exit(0)
+}
 
 const app = require('../lib')
 const log = require('../lib/log')

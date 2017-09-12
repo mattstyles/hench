@@ -25,6 +25,12 @@ $ hench
 
 Hench will start serving any files found at `/projects/my-awesome-project`, that’s it. No magic, no fuss, just serving stuff.
 
+Hench will also open any path you specify.
+
+```sh
+$ hench main.html
+```
+
 ## Programmatic Example
 
 ```js

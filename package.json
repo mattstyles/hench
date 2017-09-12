@@ -46,9 +46,13 @@
     "garnish": "^5.2.0",
     "getport": "^0.1.0",
     "internal-ip": "^1.2.0",
-    "kcors": "^1.3.2",
-    "koa": "^2.0.0-alpha.5",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
     "koa-static": "^3.0.0",
-    "opn": "^4.0.2"
+    "minimist": "^1.2.0",
+    "opn": "^5.1.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
   }
 }

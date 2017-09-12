@@ -12,8 +12,8 @@ getport(3000, 5000, (err, port) => {
     throw new Error(err)
   }
 
-  let host = internalIP() + ':' + port
-  let protocol = 'http://'
+  const host = `${internalIP()}:${port}`
+  const protocol = 'http://'
 
   app.listen(port, () => {
     log.info({
@@ -22,6 +22,6 @@ getport(3000, 5000, (err, port) => {
       message: 'server running on '
     })
 
-    opn(protocol + host)
+    opn(`${protocol}${host}`)
   })
 })

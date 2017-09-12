@@ -4,7 +4,6 @@ const path = require('path')
 const Koa = require('koa')
 const cors = require('kcors')
 const serve = require('koa-static')
-const bole = require('bole')
 
 const log = require('./log')
 
